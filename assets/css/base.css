@@ -1,0 +1,135 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: #ee4d2d;
+    --primary2-color: #f6412d;
+
+    --header__height: 12rem;
+    --navbar__height: 3rem;
+    --header__sort-bar: 46px;
+    --header-with-search: calc(var(--header__height) - var(--navbar__height)); 
+}
+
+* {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.mt-16{
+    margin-top: 1.6rem;
+}
+
+.mb-16{
+    margin-bottom: 1.6rem;
+}
+
+
+/* Test */
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+}
+
+.grid__column-2 {
+    width: 16.6667%;
+    padding: 0 5px;
+}
+
+.grid__column-2-10 {
+    width: 20%;
+    padding: 0 5px;
+}
+
+.grid__column-10 {
+    width: 83.3333%;
+    padding: 0 5px;
+}
+
+@keyframes QRfadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 1.6rem;
+    padding-top: 3.5%;
+    overflow: auto;
+    /* display: flex; */
+    animation: openModal ease-out .2s;
+    z-index: 3;
+}
+
+.modal__content {
+    margin-top: 20%;
+    width: calc(100%/3);
+    background-color: #fff;
+    margin: auto;
+    border-radius: .2rem;
+    overflow: hidden;
+    animation: openModalContent ease-out .2s;
+}
+
+.modal__sign-up {
+    display: none;
+} 
+
+.modal__sign-in {
+    display: none;
+}
+
+@keyframes openModal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes openModalContent {
+    from {
+        transform: scale(0.7);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.btn {
+    padding: 0.3rem 1.6rem; 
+    line-height: 2.4rem;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    display: inline-flex;
+    cursor: pointer;
+    outline: 0;
+}
+
+.btn-active {
+    background-color: orangered;
+    color: #fff;
+}

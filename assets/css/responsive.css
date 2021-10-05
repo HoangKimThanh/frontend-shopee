@@ -1,0 +1,132 @@
+/* Mobile and Tablet */
+@media (max-width: 1023px) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    .header {
+        position: fixed;
+    }
+
+    .cart__list {
+        position: fixed;
+        top: var(--header__height);
+        width: 100%;
+        padding: 0 calc((100% - 644px)/2);
+    }
+
+    .cart__list::before {
+        display: none;
+    }
+
+    .cart__list-list {
+        max-height: 30vh;
+    }
+
+    .header__sort-bar {
+        display: flex;
+    }
+
+    .container {
+        margin-top: calc(var(--header__height) + var(--header__sort-bar));
+        padding-top: 10px;
+    }
+}  
+
+/* Tablet */
+@media (min-width:740px) and (max-width:1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+
+    :root {
+        --header__height: 6.8rem;
+        --navbar__height: 0rem;
+    }
+
+    .search-cart {
+        width: 8rem;
+        text-align: right;
+    }
+}
+
+/* Mobile */
+@media (max-width:739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    :root {
+        --header__height: 5.4rem;
+        --navbar__height: 0rem;
+    }
+
+    .header-with-search {
+        justify-content: space-between;
+    }
+
+    .header {
+        height: ;
+    }
+
+    .search-cart,
+    .search-logo {
+        width: unset;
+    }
+
+    .search-input {
+        position: fixed;
+        top: var(--header__height);
+        animation: mobile-search-in linear 0.3s;
+        z-index: 1;
+        height: var(--header__sort-bar);
+        left: 0;
+        right: 0;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        padding: 10px;
+        display: none;
+    }
+
+    .search-history {
+        position: fixed;
+        top: calc(var(--header__height) + var(--header__sort-bar));
+        right: 0;
+        left: 0;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    .pagination-item__link {
+        min-width: 36px;
+        --height: 28px;
+        font-size: 1.6rem;
+        margin: 0;
+    }
+
+    .app__content {
+        margin: 0 4px;
+    }
+    
+    .search--logo__img {
+        width: 110px;
+    }
+
+    .footer__mobile {
+        padding: 0 16px;
+    }
+    
+    .footer__heading{
+        text-align: center;
+    }
+    
+    .footer__download,
+    .footer__list-item-link {
+        justify-content: center;
+    }
+}
+
+/* PC */
+@media (min-width:1024px) {
+    .hide-on-pc {
+        display: none;
+    }
+}
